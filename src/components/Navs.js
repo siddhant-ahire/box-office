@@ -6,7 +6,7 @@ const LINKS = [
     { to: '/starred',text :'Starred'},
 ];
 
-export const Navs = () => {
+const Navs = () => {
 
     return (
         <div>
@@ -20,3 +20,4 @@ export const Navs = () => {
         </div>
     )
 }
+export default Navs;

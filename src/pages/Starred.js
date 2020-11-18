@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import MainPageLayout from '../components/MainPageLayout';
+import ShowGrid from '../components/show/ShowGrid';
+import ActorGrid from '../components/actor/ActorGrid';
 import { apiGET } from '../misc/config';
 
 
@@ -35,18 +37,8 @@ export const Starred = () => {
         }
         if(result && result.length>0){
             return (
-                result[0].show?
-                    result.map((item)=>{
-                    console.log(item)
-                   return (
-                   <div key={item.show.id}>{item.show.name}</div>)
-                }):
-                result.map((item)=>{
-                    console.log(item)
-                   return (
-                   <div key={item.person.id}>{item.person.name}</div>)
-                   }
-            )
+                result[0].show 
+                ?<ShowGrid data={result}/>:<ActorGrid data={result}/>
             )
         } 
 

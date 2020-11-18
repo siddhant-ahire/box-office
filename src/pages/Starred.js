@@ -54,10 +54,10 @@ export const Starred = () => {
             <input type="text" onChange={onInputChange} onKeyDown={onKeyDown} value={input}/>
             <div>
             <label htmlFor="shows-search">
-                Shows<input type="radio" value="shows" id="shows-search" onClick={onRadioChange} checked={isShowSearch}/>
+                Shows<input type="radio" value="shows" id="shows-search" onChange={onRadioChange} checked={isShowSearch}/>
             </label>
             <label htmlFor="actor-search">
-               Actor<input type="radio" value="people" id="actor-search" onClick={onRadioChange} checked={!isShowSearch}/>
+               Actor<input type="radio" value="people" id="actor-search" onChange={onRadioChange} checked={!isShowSearch}/>
             </label>
             </div>
             <button type="button" onClick={onSearch}>Search</button>

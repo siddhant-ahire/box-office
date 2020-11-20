@@ -35,7 +35,7 @@ export const Home = () => {
     }
     const renderResults = ()=> {
         if(result && result.length === 0){
-            return <div>No results</div>
+            return <div style={{textAlign:"center"}}>No results</div>
         }
         if(result && result.length>0){
             return (

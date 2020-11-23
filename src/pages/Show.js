@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable no-underscore-dangle */
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import ShowMainData from '../components/show/ShowMainData';
@@ -13,7 +13,6 @@ import { useShow } from '../misc/custom-hooks';
 const Show = () => {
     const {id} = useParams();
     const {show, isLoading, error} = useShow(id)
-    console.log(show)
     if(isLoading){
         return(
             <div>Data is Loading</div>
